@@ -29,7 +29,6 @@ padding:0;
 @media(main-width:768px) {
 .container{
   width:750px;
-  background-color: red;
 }
 }
 
@@ -37,7 +36,6 @@ padding:0;
 @media(min-width:992px){
 .container{
   width:970px;
-  background-color: green;
 
 }
 }
@@ -48,7 +46,6 @@ padding:0;
 .container{
   width:1170px;
 
-  background-color: blue;
 
 }
 }
