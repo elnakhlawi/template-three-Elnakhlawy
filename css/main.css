@@ -1,10 +1,14 @@
 :root {
   --main-color: #3cb6f0;
   --main-color-alt: #a2e7e9;
+  --main-transition-duration:.3s;
 }
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 html {
   scroll-behavior: smooth;
@@ -18,6 +22,10 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* container component  */
@@ -40,12 +48,88 @@ ul {
 }
 
 /* larg screen  */
-@media (min-widht: 1200px) {
+@media (min-width: 1200px) {
   .container {
     width: 1170px;
   }
 }
 
-h2{
-  color:green
+/* start header styling   */
+
+.header {
+  background-color: white;
+  box-shadow: 0 0 10px #ddd;
+  -webkit-box-shadow: 0 0 10px #ddd;
+  -moz-box-shadow: 0 0 10px #ddd;
+  position: relative;
 }
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.header .logo {
+  color: var(--main-color);
+  font-size: 25px;
+  font-weight: bold;
+  height: 73.6px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+@media(max-width:767px){
+  .header .logo{
+    width: 100%;
+  }
+}
+
+.header .main-nav {
+  display: flex;
+}
+
+@media(max-width:767px){
+  .header .main-nav{
+    margin:0 auto;
+  }
+}
+.header .main-nav > li > a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 73.6px;
+  padding: 0 30px;
+  transition:var(--main-transition-duration) ;
+  -webkit-transition:var(--main-transition-duration) ;
+  -moz-transition:var(--main-transition-duration) ;
+  -ms-transition:var(--main-transition-duration) ;
+  -o-transition:var(--main-transition-duration) ;
+  overflow: hidden;
+}
+.header .main-nav > li > a::before{
+  content:'';
+  position: absolute;
+  width: 100%;
+  height:4px;
+  background-color:var(--main-color);
+  top:0;
+  left:-100%;
+  transition:var(--main-transition-duration);
+  -webkit-transition:var(--main-transition-duration);
+  -moz-transition:var(--main-transition-duration);
+  -ms-transition:var(--main-transition-duration);
+  -o-transition:var(--main-transition-duration);
+}
+
+.header .main-nav > li > a:hover{
+  color:var(--main-color);
+  background-color: #fafafa;
+}
+
+.header .main-nav > li > a:hover::before{
+  left:0;
+}
+/* end header styling   */
