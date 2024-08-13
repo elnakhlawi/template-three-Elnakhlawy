@@ -1,6 +1,6 @@
 :root {
   --main-color: #3cb6f0;
-  --main-color-alt: #a2e7e9;
+  --main-color-alt: #a2e7e95b;
   --main-transition-duration: 0.3s;
 }
 * {
@@ -138,9 +138,95 @@ a {
 .header .main-nav > li > a:hover::before {
   left: 0;
 }
+
+.header .main-nav li .mega-menu {
+  background-color: #fafafa;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 50px);
+  display: flex;
+  gap: 40px;
+  width: 100%;
+  padding: 30px;
+  opacity: 0;
+  transition:top var(--main-transition-duration),opacity var(--main-transition-duration);
+  -webkit-transition:top var(--main-transition-duration),opacity var(--main-transition-duration);
+  -moz-transition:top var(--main-transition-duration),opacity var(--main-transition-duration);
+  -ms-transition:top var(--main-transition-duration),opacity var(--main-transition-duration);
+  -o-transition:top var(--main-transition-duration),opacity var(--main-transition-duration);
+}
+@media(max-width:991px){
+  .header .main-nav li .mega-menu{
+    flex-direction: column;
+    padding:0;
+    gap:0;
+  }
+}
+.header .main-nav li:hover .mega-menu {
+  top:calc(100% + 1px);
+  z-index: 122;
+  opacity: 1;
+}
+
+.header .main-nav li .mega-menu .image img {
+  max-width: 100%;
+}
+
+@media(max-width:991px){
+  .header .main-nav li .mega-menu .image img{
+    display:none;
+
+  }
+}
+
+.header .main-nav li .mega-menu .links {
+  min-width: 250px;
+  flex: 1;
+}
+
+.header .main-nav li .mega-menu .links li {
+  position: relative;
+}
+.header .main-nav li .mega-menu .links li:not(:last-child) {
+  border-bottom: 1px solid #e9e6e6;
+}
+@media(max-width:991px){
+  .header .main-nav li .mega-menu .links:first-of-type li:last-child{
+    border-bottom: 1px solid #e9e6e6;
+  }
+}
+.header .main-nav li .mega-menu .links li::before {
+  content: "";
+  position: absolute;
+  width:0;
+  height: 100%;
+  background: #c4b7b740;
+  z-index: -1;
+  transition:width var(--main-transition-duration);
+  -webkit-transition:width var(--main-transition-duration);
+  -moz-transition:width var(--main-transition-duration);
+  -ms-transition:width var(--main-transition-duration);
+  -o-transition:width var(--main-transition-duration);
+}
+.header .main-nav li .mega-menu .links li:hover::before{
+  width: 100%;
+}
+.header .main-nav li .mega-menu .links li a {
+  display:flex;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color:var(--main-color);
+  align-items: center;
+}
+
+.header .main-nav li .mega-menu .links li a i{
+  margin-right:15px;
+}
 /* end header styling   */
 
-/* start landing styling  */ .landing {
+/* start landing styling  */
+.landing {
   position: relative;
 }
 .landing::after {
