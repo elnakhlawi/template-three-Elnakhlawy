@@ -938,39 +938,39 @@ a {
   -moz-transition: var(--main-transition-duration);
   -ms-transition: var(--main-transition-duration);
   -o-transition: var(--main-transition-duration);
-  counter-increment:boxs;
+  counter-increment: boxs;
 }
 
-.services .box:hover{
-  cursor:pointer;
-  transform:translateY(-10px);
-  -webkit-transform:translateY(-10px);
-  -moz-transform:translateY(-10px);
-  -ms-transform:translateY(-10px);
-  -o-transform:translateY(-10px);
+.services .box:hover {
+  cursor: pointer;
+  transform: translateY(-10px);
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  -o-transform: translateY(-10px);
 }
-.services .box::before{
+.services .box::before {
   content: " ";
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top:5px;
+  top: 5px;
   width: 0;
-  height:5px;
-  background-color:var(--main-color);
+  height: 5px;
+  background-color: var(--main-color);
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
-  transition:var(--main-transition-duration);
-  -webkit-transition:var(--main-transition-duration);
-  -moz-transition:var(--main-transition-duration);
-  -ms-transition:var(--main-transition-duration);
-  -o-transition:var(--main-transition-duration);
+  transition: var(--main-transition-duration);
+  -webkit-transition: var(--main-transition-duration);
+  -moz-transition: var(--main-transition-duration);
+  -ms-transition: var(--main-transition-duration);
+  -o-transition: var(--main-transition-duration);
 }
-.services .box:hover::before{
-  width:100%;
-  top:-7px;
+.services .box:hover::before {
+  width: 100%;
+  top: -7px;
 }
 .services .box i {
   color: #777;
@@ -989,46 +989,105 @@ a {
   background-color: #f9f9f9;
   text-align: right;
 }
-.services .box .details::before{
-  content:"0" counter(boxs);
-  position:absolute;
-  padding-right:15px;
+.services .box .details::before {
+  content: "0" counter(boxs);
+  position: absolute;
+  padding-right: 15px;
   text-align: center;
-  align-content:center;
-  left:0;
-  bottom:0;
-  height:100%;
-  width:80px;
-  background-color:var(--main-color);
-  font-size:22px;
+  align-content: center;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 80px;
+  background-color: var(--main-color);
+  font-size: 22px;
   font-weight: bold;
-  color:white;
+  color: white;
 }
 
-.services .box .details::after{
-  content:'';
-  position:absolute;
+.services .box .details::after {
+  content: "";
+  position: absolute;
   text-align: center;
-  align-content:center;
-  left:60px;
-  bottom:0;
-  height:calc(100% + 0.4px);
-  width:50px;
-  background-color:#d5d5d5;
-  font-size:22px;
+  align-content: center;
+  left: 60px;
+  bottom: 0;
+  height: calc(100% + 0.4px);
+  width: 50px;
+  background-color: #d5d5d5;
+  font-size: 22px;
   font-weight: bold;
-  color:white;
+  color: white;
   transform: skew(-30deg);
   -webkit-transform: skew(-30deg);
   -moz-transform: skew(-30deg);
   -ms-transform: skew(-30deg);
   -o-transform: skewX(-30deg);
-
 }
 .services .box .details a {
   color: var(--main-color);
 }
 /* end services section */
+
+/* start skills styling */
+.our-skills {
+  padding-top: calc(var(--main-padding-sections)- 50%);
+  padding-bottom: var(--main-padding-sections);
+  position: relative;
+}
+
+.our-skills .container {
+  display: flex;
+  align-items: center;
+}
+@media(max-width:991px){
+  .our-skills .container{
+    flex-direction: column;
+  }
+  .our-skills .skills {
+  width: 100%;
+  padding:0 30px;
+}
+}
+.our-skills .skills {
+  flex: 1;
+}
+
+.our-skills .skills h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.our-skills .skills h3 span {
+  border: 1px solid #ccc;
+  font-size: 12px;
+  padding: 3px 5px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  color: var(--main-color);
+}
+.our-skills .skills .progress {
+  background-color: #eee;
+  margin-bottom:20px;
+  height: 30px;
+  position: relative;
+}
+
+.our-skills .skills .progress span {
+  background-color: var(--main-color);
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+/* end skills styling */
+
 /* start animation */
 
 @keyframes up-and-down {
