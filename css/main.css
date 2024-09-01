@@ -1350,6 +1350,24 @@ a {
   position: relative;
   background-color: var(--bg-section-alt);
 }
+.pricing .dot-down{
+  position: absolute;
+  bottom:150px;
+  width: 200px;
+  height: 200px;
+  background-image: radial-gradient(blue 2px, transparent 2px);
+  background-size: 20px 20px;
+}
+
+.pricing .dot-up{
+  width:200px;
+  height: 200px;
+  position: absolute;
+  right:2px;
+  top:250px;
+  background-image: radial-gradient( blue 2px ,transparent 2px);
+  background-size: 20px 20px ;
+}
 .pricing .container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -1398,20 +1416,20 @@ a {
   right: 20px;
   color: white;
   width: 40px;
-  padding: 10px 10px 35px ;
+  padding: 10px 10px 35px;
   writing-mode: vertical-lr;
   text-transform: capitalize;
   font-size: 20px;
   font-weight: bold;
 }
-.pricing .container .box.popular .lable::before{
-  content:'';
-  position:absolute;
+.pricing .container .box.popular .lable::before {
+  content: "";
+  position: absolute;
   border-style: solid;
-  border-color:transparent transparent white ;
-  border-width:20px;
-  bottom:0;
-  left:0; 
+  border-color: transparent transparent white;
+  border-width: 20px;
+  bottom: 0;
+  left: 0;
 }
 .pricing .container .box .title {
   margin: 30px 0;
