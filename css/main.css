@@ -1505,8 +1505,8 @@ a {
   justify-content: center;
   border: 1px solid #dddddd;
 }
-@media(max-width:767px){
-  .top-videos .holder{
+@media (max-width: 767px) {
+  .top-videos .holder {
     flex-direction: column;
   }
 }
@@ -1545,19 +1545,98 @@ a {
 .top-videos .holder .preview {
   display: flex;
   flex-direction: column;
-  padding:10px;
+  padding: 10px;
   justify-content: space-between;
-  
 }
-.top-videos .holder .preview > img{
+.top-videos .holder .preview > img {
   max-width: 100%;
 }
 
-.top-videos .holder .preview >div{
+.top-videos .holder .preview > div {
   background-color: white;
-  padding:20px;
+  padding: 20px;
 }
 /* end top-video */
+
+/* start stats  */
+.stats {
+  padding-top: calc(var(--main-padding-sections) - 50px);
+  padding-bottom: var(--main-padding-sections);
+  background-image: url("../images/stats.jpg");
+  background-size: cover;
+  position: relative;
+  min-height: 300px;
+}
+.stats::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.774);
+}
+.stats > h3 {
+  width: fit-content;
+  color: black;
+  position: relative;
+  margin: 0 auto 10px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.stats .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.stats .container .box{
+  background-color: white;
+  margin-top: 30px;
+  padding: 30px 15px;
+  text-align: center;
+  position: relative;
+  opacity: 0.7;
+
+}
+.stats .container .box::before,
+.stats .container .box::after{
+  content:'';
+  position: absolute;
+  width:2px;
+  height: 0;
+  background-color: var(--main-color);
+  transition:1s;
+  -webkit-transition:1s;
+  -moz-transition:1s;
+  -ms-transition:1s;
+  -o-transition:1s;
+}
+.stats .container .box::before{
+bottom: 0;
+left: 0;
+}
+.stats .container .box::after{
+  top:0;
+  right:0;
+}
+.stats .container .box:hover::before,
+.stats .container .box:hover::after{
+  height: 100%;
+}
+.stats .container .box .number{
+display: block;
+margin: 10px;
+color: var(--main-color);
+font-style: italic;
+}
+
+.stats .container .box .text{
+font-size: 40px;
+font-weight: bold;
+}
+/* start stats  */
 
 /* start animation */
 
