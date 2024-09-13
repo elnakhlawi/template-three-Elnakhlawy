@@ -139,13 +139,13 @@ a {
   border-style: solid;
   border-color: transparent transparent var(--bg-section-alt) transparent;
 }
-@media(max-width:767px){
-  .spans-arro span{
-  border-width: 9px;
-  margin-right: 0;
-  }
+@media (max-width: 767px) {
   .spans-arro {
-    top:-18px
+    top: -18px;
+  }
+  .spans-arro span {
+    border-width: 9px;
+    margin-right: 0;
   }
 }
 
@@ -1765,8 +1765,8 @@ a {
   padding: 70px 0 0 0;
   background-color: #191919;
 }
-@media(max-width:767px){
-  .footer  {
+@media (max-width: 767px) {
+  .footer {
     text-align: center;
   }
 }
@@ -1789,8 +1789,8 @@ a {
 .footer .box .social {
   display: flex;
 }
-@media(max-width:767px){
-  .footer .box .social{
+@media (max-width: 767px) {
+  .footer .box .social {
     justify-content: center;
   }
 }
@@ -1873,8 +1873,8 @@ a {
   align-items: center;
   color: #939393;
 }
-@media(max-width:767px){
-  .footer .box .line{
+@media (max-width: 767px) {
+  .footer .box .line {
     flex-direction: column;
   }
 }
@@ -1883,9 +1883,9 @@ a {
   font-size: 22px;
   margin-right: 10px;
 }
-@media(max-width:767px){
-  .footer .box .line i{
-    margin-bottom:10px;
+@media (max-width: 767px) {
+  .footer .box .line i {
+    margin-bottom: 10px;
   }
 }
 .footer .box .line .info span {
@@ -1903,7 +1903,7 @@ a {
   border-top: 1px solid #444444;
   padding: 25px 0;
   text-align: center;
-  color:whitesmoke;
+  color: whitesmoke;
 }
 /* end footer  */
 
